@@ -17,12 +17,10 @@ ready(function() {
 
 	demo.addEventListener('mouseenter', function() {
 		cursor.style.transform = 'translate(245px, -115px)';
-
 		arrow.style.opacity = 0;
 	
 		timer = setTimeout(function(){
-			icon.style.opacity = 1;
-
+			menubarIcon.style.opacity = 1;
 			dropdown.style.opacity = 1;
 			dropdown.style.transform = 'translateY(5px)'
 		}, 1250);
@@ -32,8 +30,8 @@ ready(function() {
 		clearTimeout(timer);
 
 		cursor.style = null;
-		menubarIcon.style.opacity = 0;
 		arrow.style = null;
+		menubarIcon.style.opacity = 0;
 		dropdown.style = null;
 	});
 });

@@ -141,6 +141,7 @@ nav small {
 	position: absolute;
 	transition: transform .85s ease-in-out;
 	width: 2.8rem;
+	z-index: 1;
 }
 
 #arrow {
