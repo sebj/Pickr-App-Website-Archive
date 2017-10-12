@@ -1,83 +1,63 @@
-<!DOCTYPE html>
-
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
-
-		<meta charset="utf-8" />
-
-		<title>Get Pickr</title>
-		
-		<link rel="shortcut icon" href="assets/favicon.ico" />
-		
-		<link href="assets/styles.css" media="screen" rel="stylesheet" type="text/css" />
-		
-		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->	
-		<link href="http://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet" />
-		<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" />
-		<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400italic" rel="stylesheet" />
-		
-		<!--JQUERY IMPORTS-->	
-		<script type="text/javascript" src="assets/jquery.js"></script>
-		<script type="text/javascript" src="assets/main.js"></script>
-		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="theme-color" content="#707C8A">
 		<meta name="description" content="With Pickr you can easily copy colors from your screen directly into your favorite coding and design apps." />
+
+		<title>Get Pickr for OS X</title>
+
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://twitter.com/pickrapp">
+		
+		<link rel="stylesheet" type="text/css" href="assets/reset.css" />
+		<link rel="stylesheet" type="text/css" href="assets/styles.css" />
+
+		<script type="text/javascript" src="assets/main.js"></script>
 	</head>
 
-	<body class="no-js">
-		<!--CONTAINER-->	
-		<div id="container">
+	<body>
+		<img id="icon" src="assets/icon.png" alt="Pickr app icon of an eye dropper with color swatches" role="presentation" aria-hidden="true" />
 		
-			<!--ICON-->
-			<img class="icon" src="assets/icon.png" alt="icon" />
-		
-			<!--NAV-->
-			<nav>
-				<a class="grey button" href="http://twitter.com/pickrapp" target="_blank">Support</a>
-				<a class="blue button" href="http://itunes.apple.com/us/app/pickr/id543659953?ls=1&mt=12" target="_blank">Download</a>
-				<p>Requires OS X 10.8+</p>
-			</nav>
-			
-			<!--JQUERY DEMO-->		
-			<div id="demo">
-				<div id="arrow"></div>
-				<div id="cursor"></div>
-				<div id="icon-small"></div>
-				<div id="dropdown"></div>
-					
-				<h1>Pickr, for developers and designers</h1>
-			
-				<p>With Pickr you can easily copy colors from your screen directly into your favorite coding and design apps.</p>	
-			</div>
-			
-			<!--PAGE-->		
-			<div id="page">
-				<!--TWITTER-->			
-				<div id="twitter_div">
-					<h2>Twitter</h2>
-				
-					<ul id="twitter_update_list"><li></li></ul>
-				</div>
-				
-				<span id="appended_twitter_scripts"></span>
-			
-				<!--ABOUT-->			
-				<div id="about">
-					<h2>About</h2>
-				
-					<p>Pickr has a wide range of options to fit your needs, no matter what you're working on. Copy colors in formats such as HEX, RGB, RGBA, NSColor and many more.
-						<br /><br />
-						For just $0.99 Pickr is truly the best app to accompany you with your coding and designing workflow.</p>
-				</div>
-			</div>		
-			
-			<!--FOOTER-->	
-			<footer>
-				<span></span>
+		<nav>
+			<a class="button" id="support" href="https://twitter.com/pickrapp" rel="noopener" title="Support and Help for Pickr" target="_blank">Support</a>
+			<a class="button" href="https://itunes.apple.com/us/app/pickr/id543659953?ls=1&mt=12" title="Download Pickr on the Mac App Store" rel="noopener" target="_blank">Download</a>
+			<small>Requires OS X 10.8+</small>
+		</nav>
 
-				<p>&copy; Copyright 2012 <a href="http://pickr.thomv.com/">Pickr</a>. An app by <a href="http://twitter.com/Iamsebj" target="_blank">Seb Jachec</a> and <a href="http://twitter.com/thomweerd" target="_blank">Thom van der Weerd</a>.</p>
+		<section id="demo">
+			<div id="arrow" role="presentation" aria-hidden="true"></div>
+			<div id="cursor" role="presentation" aria-hidden="true"></div>
+			<div id="menubar-icon" role="presentation" aria-hidden="true"></div>
+			<div id="dropdown" role="presentation" aria-hidden="true"></div>
 				
-				<p><a href="http://twitter.com/pickrapp" target="_blank">Twitter</a></p>
-			</footer>
-		</div>
+			<h1>Pickr, for developers and designers</h1>
+
+			<p>With Pickr you can easily copy colors from your screen directly into your favorite coding and design apps.</p>
+		</section>
+
+		<section>
+			<section id="twitter">
+				<h2>Twitter</h2>
+			
+				<ul id="twitter_update_list"><li></li></ul>
+			</section>
+
+			<section id="about">
+				<h2>About</h2>
+			
+				<p>Pickr has a wide range of options to fit your needs, no matter what you're working on. Copy colors in formats such as HEX, RGB, RGBA, NSColor and many more.</p>
+					
+				<p>For just $0.99 Pickr is truly the best app to accompany you with your coding and designing workflow.</p>
+			</section>
+		</section>
+
+		<footer role="contentinfo">
+			<small>&copy; Copyright 2012 Pickr. An app by <a href="https://twitter.com/Iamsebj" rel="noopener" target="_blank" title="@iamsebj on Twitter">Seb Jachec</a> and <a href="https://twitter.com/thomweerd" rel="noopener" target="_blank" title="@thomweerd on Twitter">Thom van der Weerd</a>.</small>
+			
+			<small><a href="https://twitter.com/pickrapp" rel="noopener" target="_blank" title="@PickrAppp on Twitter">Twitter</a></small>
+		</footer>
 	</body>
 </html>

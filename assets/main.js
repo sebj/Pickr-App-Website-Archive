@@ -1,31 +1,39 @@
-$(function() {
-    $('body>a').css({'display':'none'});
-	$('body').fadeIn();
-  	$('body').removeClass('no-js');
-	
+function ready(fn) {
+  if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+ready(function() {	
 	var timer;
-	
-	$('#demo').hover(function() {
-		$('#cursor').animate({marginTop:'270px', marginLeft:'395px'}, {queue: false, duration: 1000});
-		$('#arrow').animate({opacity:'0'}, {queue: false, duration: 75});
+
+	const demo = document.getElementById('demo');
+	const cursor = document.getElementById('cursor');
+	const arrow = document.getElementById('arrow');
+	const menubarIcon = document.getElementById('menubar-icon');
+	const dropdown = document.getElementById('dropdown');
+
+	demo.addEventListener('mouseenter', function() {
+		cursor.style.transform = 'translate(245px, -115px)';
+
+		arrow.style.opacity = 0;
 	
 		timer = setTimeout(function(){
-			$('#icon-small').css({opacity:'1'});
-			$('#dropdown').animate({opacity:'1', marginTop:'285px'}, {queue: false, duration: 150});
+			icon.style.opacity = 1;
+
+			dropdown.style.opacity = 1;
+			dropdown.style.transform = 'translateY(5px)'
 		}, 1250);
-	
-	}, function() {
-		clearTimeout(timer);
-		$('#cursor').animate({marginTop:'375px', marginLeft:'150px'}, {queue: false, duration: 1000});
-		$('#icon-small').css({opacity:'0'});
-		$('#arrow').animate({opacity:'1'}, {queue: false, duration: 500});
-		$('#dropdown').animate({opacity:'0', marginTop:'280px'}, {queue: false, duration: 100});
-		
 	});
-});
 
-$(window).load(function() {
-	$('#appended_twitter_scripts').append('<script src="http://twitter.com/javascripts/blogger.js"></script><script src="http://twitter.com/statuses/user_timeline/pickrapp.json?callback=twitterCallback2&count=2"></script>');
+	demo.addEventListener('mouseleave', function() {
+		clearTimeout(timer);
 
-	$('.icon').animate({marginTop:'0px'}, 1000);
+		cursor.style = null;
+		menubarIcon.style.opacity = 0;
+		arrow.style = null;
+		dropdown.style = null;
+	});
 });
