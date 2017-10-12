@@ -157,70 +157,50 @@ nav small {
 	transition: opacity .05s ease-in-out;
 }
 
-/*--ABOUT--*/
+#info {
+	display: flex;
+}
+
 #about {
-	width: 50rem;
+	width: 62.5%;
 }
 
-/*--TWITTER--*/
 #twitter {
-	float: right;
 	text-shadow: 0 .1rem 0 white;
-	width: 27.5rem;
-}
-
-#twitter_update_list {
-	margin-top: 1.5rem;
-}
-
-#twitter li:first-child {
-	border-bottom: .1rem solid #c4c9d1;
-	padding-bottom: 1.5rem;
-}
-
-#twitter li:last-child {
-	border-top: .1rem solid #eef0f3;
-	padding-top: 1.5rem;
-}
-
-#twitter a {
-	color: #5e6d7d;
+	width: calc(100% - 62.5%);
 }
 
 /*--BUTTONS--*/
 .button {
+	background: url('button.png') no-repeat top right;
+	background-position-x: right;
+	background-position-y: top;
+	color: white;
+	display: inline-block;
+	font-weight: 500;
 	height: 3rem;
-	width: 13.4rem;
 	margin: 0 1rem 0 0;
 	padding-top: .8rem;
-	color: white;
-	text-shadow: 0 .1rem .1rem #1a2a3a;
 	text-align: center;
-	font-weight: 500;
-	background: url('button.png') no-repeat top right;
-	float: left;
+	text-shadow: 0 .1rem .1rem #1a2a3a;
+	width: 13.4rem;
 }
 
 .button:hover {
-	background-position: center right;
+	background-position-y: center;
 }
 
 .button:active {
-	background-position: bottom right;
+	background-position-y: bottom;
 	color: #c7d4de;
 }
 
 #support {
 	text-shadow: 0 .1rem .1rem #4a535e;
-	background-position: top left;
-}
-
-#support:hover {
-	background-position: center left;
+	background-position-x: left;
 }
 
 #support:active {
-	background-position: bottom left;
 	color: #ddd;
 }
 
